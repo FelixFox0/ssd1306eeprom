@@ -88,6 +88,7 @@ class SSD1306Device
         void ssd1306_char_font6x8_eeprom(char ch);
         void ssd1306_int_font6x8_eeprom(int num);
         void ssd1306_float_font6x8_eeprom(double number, uint8_t digits);
+        void ssd1306_progmem_font6x8_eeprom(const char *s);
 
 		void ssd1306_draw_bmp(uint8_t x0, uint8_t y0, uint8_t x1, uint8_t y1, const uint8_t bitmap[]);
 

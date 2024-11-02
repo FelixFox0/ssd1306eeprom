@@ -343,6 +343,14 @@ void SSD1306Device::ssd1306_float_font6x8_eeprom(double number, uint8_t digits)
   }
 }
 
+void SSD1306Device::ssd1306_progmem_font6x8_eeprom(const char *s) {
+  char ch = pgm_read_byte(s);
+	while (ch != 0) { 
+		ssd1306_char_font6x8_eeprom(ch);
+    ch = pgm_read_byte(++s);
+	}
+}
+
 
 
 SSD1306Device SSD1306;
